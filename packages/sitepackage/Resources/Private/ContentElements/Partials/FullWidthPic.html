@@ -1,0 +1,17 @@
+
+    <html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:uvsh="http://typo3.org/ns/Takevalue/Sitepackage/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+
+<f:for each="{files}" as="image">
+    <uvsh:responsiveImage image="{image}"
+                          class="regular-image w-100 mw-100 h-auto"
+                          webp="{false}"
+                          title="{image.title}"
+                          alt="{image.alternative}"
+                          responsiveSizes="{xs: 551, sm: 770, md: 900, lg: 1366, xl: 1920, xxl: 1920}"/>
+</f:for>
+
+</html>

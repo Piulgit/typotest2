@@ -1,0 +1,21 @@
+// Fluid Section
+
+tt_content.container_section < lib.contentElement
+
+tt_content.container_section {
+
+    templateName = ContainerSection
+
+    templateRootPaths {
+
+        10 = EXT:sitepackage/Resources/Private/Container/
+
+    }
+
+    dataProcessing {
+
+        100 = B13\Container\DataProcessing\ContainerProcessor
+
+    }
+
+}

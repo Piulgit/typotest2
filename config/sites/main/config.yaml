@@ -1,0 +1,32 @@
+base: 'https://typotest2.ddev.site/'
+dependencies:
+  - takevalue/sitepackage
+errorHandling: {  }
+languages:
+  -
+    title: English
+    enabled: true
+    languageId: 0
+    base: /
+    locale: en_US.UTF-8
+    navigationTitle: English
+    flag: us
+rootPageId: 1
+websiteTitle: ''
+routeEnhancers:
+  News:
+    type: Extbase
+    limitToPages:
+      - 8
+    extension: News
+    plugin: Pi1
+    routes:
+      - routePath: '/{news-title}'
+        _controller: 'News::detail'
+        _arguments:
+          news-title: news
+    aspects:
+      news-title:
+        type: NewsTitle
+ 
+routes: {  }

@@ -1,0 +1,37 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+    <f:layout name="Default"/>
+<f:section name="Main">
+
+        <f:switch expression="{data.layout}">
+<f:case value="0">
+<f:variable name="container_class" value="container" />
+</f:case>
+<f:case value="1">
+<f:variable name="container_class" value="container-fluid p-0" />
+</f:case>
+</f:switch>
+
+
+        <div class="{container_class}">
+<div class="row">
+<div class="col-12 col-md-4">
+<f:for each="{children_205}" as="record">
+<f:format.raw>{record.renderedContent}</f:format.raw>
+</f:for>
+</div>
+<div class="col-12 col-md-4">
+<f:for each="{children_206}" as="record">
+<f:format.raw>{record.renderedContent}</f:format.raw>
+</f:for>
+</div>
+<div class="col-12 col-md-4">
+<f:for each="{children_207}" as="record">
+<f:format.raw>{record.renderedContent}</f:format.raw>
+</f:for>
+</div>
+</div>
+</div>
+
+
+    </f:section>

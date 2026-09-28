@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+    <div class="container-accordion">
+        <div class="accordion accordion-flush" id="accordionFlush-{data.uid}">
+
+            <f:for each="{children_212}" as="record" iteration="iterator">
+
+                <div class="accordion-item">
+                    <div class="accordion-header" id="flush-heading-{iterator.index}-uid{data.uid}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-{iterator.index}-uid{data.uid}" aria-expanded="false" aria-controls="flush-collapse-{iterator.index}-uid{data.uid}">
+                            <f:format.raw>{record.header}</f:format.raw>
+                        </button>
+                    </div>
+                    <div id="flush-collapse-{iterator.index}-uid{data.uid}" class="accordion-collapse collapse" aria-labelledby="flush-heading-{iterator.index}-uid{data.uid}" data-bs-parent="#accordionFlush-{data.uid}">
+                        <div class="accordion-body">
+                            <f:format.raw>{record.bodytext}</f:format.raw>
+                        </div>
+                    </div>
+                </div>
+
+            </f:for>
+
+        </div>
+    </div>
+
+</html>

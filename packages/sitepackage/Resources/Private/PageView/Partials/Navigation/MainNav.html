@@ -1,0 +1,115 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<nav class="navbar navbar-expand-lg site-nav w-100">
+<div class="container">
+
+        <!-- Mobile Toggle -->
+<button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavigation"
+            aria-controls="mainNavigation"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+>
+<span class="navbar-toggler-icon"></span>
+</button>
+
+        <div class="collapse navbar-collapse" id="mainNavigation">
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <!-- HOME (site root is not part of mainnavigation) -->
+<li class="nav-item">
+<f:link.page
+                        pageUid="1"
+                        class="nav-link{f:if(condition: '{data.uid} == 1', then: ' active')}"
+                        title="Home"
+>
+                        Home
+</f:link.page>
+</li>
+
+                <f:for each="{mainnavigation}" as="mainnavigationItem">
+
+                    <f:if condition="{mainnavigationItem.children}">
+
+                        <!-- ITEM WITH CHILDREN (DROPDOWN) -->
+<f:then>
+
+                            <li class="nav-item dropdown">
+<f:if condition="{mainnavigationItem.link}">
+<f:then>
+<a
+                                            class="nav-link dropdown-toggle{f:if(condition: mainnavigationItem.active, then: ' active')}"
+                                            href="{mainnavigationItem.link}"
+                                            target="{mainnavigationItem.target}"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                            title="{mainnavigationItem.title}"
+>
+                                            {mainnavigationItem.title}
+</a>
+</f:then>
+<f:else>
+<a
+                                            class="nav-link dropdown-toggle"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+>
+                                            {mainnavigationItem.title}
+</a>
+</f:else>
+</f:if>
+
+                                <ul class="dropdown-menu">
+<f:for each="{mainnavigationItem.children}" as="child">
+<li>
+<a
+                                                class="dropdown-item{f:if(condition: child.active, then: ' active')}"
+                                                href="{child.link}"
+                                                target="{child.target}"
+                                                title="{child.title}"
+>
+                                                {child.title}
+</a>
+</li>
+</f:for>
+</ul>
+
+                            </li>
+
+                        </f:then>
+
+                        <!-- ITEM WITHOUT CHILDREN -->
+<f:else>
+
+                            <li class="nav-item">
+<a
+                                    class="nav-link{f:if(condition: mainnavigationItem.active, then: ' active')}"
+                                    href="{mainnavigationItem.link}"
+                                    target="{mainnavigationItem.target}"
+                                    title="{mainnavigationItem.title}"
+>
+                                    {mainnavigationItem.title}
+</a>
+</li>
+
+                        </f:else>
+
+                    </f:if>
+
+                </f:for>
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+
+</html>

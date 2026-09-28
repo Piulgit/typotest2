@@ -1,0 +1,9 @@
+lib.contentElement {
+    templateRootPaths {
+        20 = EXT:sitepackage/Resources/Private/Container/
+    }
+
+    layoutRootPaths {
+        100 = EXT:sitepackage/Resources/Private/Layouts/
+    }
+}

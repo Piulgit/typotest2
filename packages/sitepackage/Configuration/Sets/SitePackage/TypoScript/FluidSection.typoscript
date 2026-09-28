@@ -1,0 +1,10 @@
+// Fluid Section
+tt_content.fluid-section < lib.contentElement
+
+tt_content.fluid-section {
+    templateName = FluidSection
+
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}

@@ -1,0 +1,11 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+    <div class="full-section{f:if(condition: data.innerspace_before, then: ' {data.innerspace_before}')}{f:if(condition: data.innerspace_after, then: ' {data.innerspace_after}')}{f:if(condition: data.space_before_class, then: ' {data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' {data.space_after_class}')}{f:if(condition: data.bgcolor, then: ' {data.bgcolor}')}">
+        <f:for each="{children_201}" as="record">
+            <f:format.raw>{record.renderedContent}</f:format.raw>
+        </f:for>
+    </div>
+
+
+</html>

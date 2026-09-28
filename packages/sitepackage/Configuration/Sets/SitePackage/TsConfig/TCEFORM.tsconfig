@@ -1,0 +1,64 @@
+TCEFORM {
+    tt_content {
+        layout.types.two_columns_layout.removeItems = 2,3
+        layout.types.two_columns_layout.altLabels.1 = Full Width (Fluid)
+
+        layout.types.textpic.removeItems = 2,3
+        layout.types.textpic.altLabels.1 = Blog Layout
+
+        layout.types.image.removeItems = 2,3
+        layout.types.image.altLabels.1 = Full Width (Fluid)
+
+        header_layout {
+            altLabels.1 = H1
+            altLabels.2 = H2
+            altLabels.3 = H3
+            altLabels.4 = H4
+            removeItems = 5
+
+            addItems.20 = div
+            addItems.20.group = Other Tags
+            addItems.21 = span
+            addItems.21.group = Other Tags
+            addItems.22 = p
+            addItems.22.group = Other Tags
+
+            addItems.30 = Fake H1
+            addItems.30.group = Fake Heading
+            addItems.31 = Fake H2
+            addItems.31.group = Fake Heading
+            addItems.32 = Fake H3
+            addItems.32.group = Fake Heading
+            addItems.33 = Fake H4
+            addItems.33.group = Fake Heading
+        }
+
+        space_before_class {
+            removeItems = extra-small, small, medium, large, extra-large
+            addItems.mt-0 = mt-0
+            addItems.mt-2 = mt-2
+            addItems.mt-3 = mt-3
+            addItems.mt-4 = mt-4
+            addItems.mt-5 = mt-5
+            addItems.mt-6 = mt-6
+            addItems.mt-7 = mt-7
+            addItems.mt-8 = mt-8
+            addItems.mt-9 = mt-9
+            addItems.mt-10 = mt-10
+        }
+
+        space_after_class {
+            removeItems = extra-small, small, medium, large, extra-large
+            addItems.mb-0 = mb-0
+            addItems.mb-2 = mb-2
+            addItems.mb-3 = mb-3
+            addItems.mb-4 = mb-4
+            addItems.mb-5 = mb-5
+            addItems.mb-6 = mb-6
+            addItems.mb-7 = mb-7
+            addItems.mb-8 = mb-8
+            addItems.mb-9 = mb-9
+            addItems.mb-10 = mb-10
+        }
+    }
+}

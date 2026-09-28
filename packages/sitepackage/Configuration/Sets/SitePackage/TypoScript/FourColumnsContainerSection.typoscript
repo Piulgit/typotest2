@@ -1,0 +1,8 @@
+// Fluid Section
+tt_content.four_columns_layout < lib.contentElement
+tt_content.four_columns_layout {
+    templateName = FourColumnsLayout
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}

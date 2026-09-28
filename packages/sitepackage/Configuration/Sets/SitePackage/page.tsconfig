@@ -1,0 +1,21 @@
+@import './PageTsConfig/BackendLayouts/'
+@import './TsConfig/'
+
+RTE {
+    default {
+        preset = sitepackage
+    }
+}
+
+TCEFORM {
+    pages {
+
+    }
+    tt_content {
+
+    }
+}
+
+TCEMAIN {
+
+}

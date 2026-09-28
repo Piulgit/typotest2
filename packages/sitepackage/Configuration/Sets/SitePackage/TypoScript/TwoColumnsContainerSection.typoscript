@@ -1,0 +1,8 @@
+// Fluid Section
+tt_content.two_columns_layout < lib.contentElement
+tt_content.two_columns_layout {
+    templateName = TwoColumnsLayout
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
